@@ -1,0 +1,9 @@
+# Adams Bilal — Web Developer
+
+> Portfolio site for Adams Bilal, a web developer working with HTML, CSS, JavaScript, React, Python, and Node.js.
+
+## Pages
+- [Home](https://adamsbilal.netlify.app/): Introduction and skills overview.
+- [Projects](https://adamsbilal.netlify.app/projects.html): Selected work, including Sabr Scents (a fragrance brand website).
+- [About](https://adamsbilal.netlify.app/about.html): How Adams works and his toolkit.
+- [Contact](https://adamsbilal.netlify.app/contact.html): Email, WhatsApp, TikTok, and Instagram.

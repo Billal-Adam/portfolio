@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2TPDMH9KCS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-2TPDMH9KCS");
+</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Adams Bilal — Web Developer</title>
+<meta name="description" content="Adams Bilal — web developer working with HTML, CSS, JavaScript, React, Python, and Node.js.">
+<link rel="canonical" href="https://adamsbilal.netlify.app/">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta property="og:title" content="Adams Bilal — Web Developer">
+<meta property="og:description" content="Adams Bilal — web developer working with HTML, CSS, JavaScript, React, Python, and Node.js.">
+<meta property="og:image" content="https://adamsbilal.netlify.app/assets/og-image.png">
+<meta property="og:url" content="https://adamsbilal.netlify.app/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="description" content="Adams Bilal — web developer. HTML, CSS, JavaScript, React, Python, Node.js." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Adams Bilal",
+  "url": "https://adamsbilal.netlify.app/",
+  "jobTitle": "Web Developer",
+  "knowsAbout": ["HTML", "CSS", "JavaScript", "React", "Python", "Node.js"],
+  "email": "billybilsky5@gmail.com"
+}
+</script>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="index.html">Adams<span>.</span>Bilal</a>
+  <div class="nav-links">
+    <a href="index.html" class="active">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<section class="hero" id="heroSection">
+  <div class="glow glow-1"></div>
+  <div class="glow glow-2"></div>
+  <div class="hero-eyebrow">Web developer</div>
+  <h1>Building for the <span class="accent">web</span>,<br>front to back.</h1>
+  <p class="hero-sub">I'm Adams Bilal. I build interfaces with HTML, CSS, JavaScript and React, and the systems behind them with Python and Node.js.</p>
+  <div class="hero-cta">
+    <a href="projects.html" class="btn btn-primary">View work</a>
+    <a href="contact.html" class="btn btn-ghost">Get in touch</a>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span>Toolkit</span>
+      <h2>Skills</h2>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card reveal" style="--fill: 95%"><div class="name">HTML</div><div class="bar-track"><div class="bar-fill"></div></div></div>
+      <div class="skill-card reveal" style="--fill: 85%"><div class="name">CSS</div><div class="bar-track"><div class="bar-fill"></div></div></div>
+      <div class="skill-card reveal" style="--fill: 85%"><div class="name">JavaScript</div><div class="bar-track"><div class="bar-fill"></div></div></div>
+      <div class="skill-card reveal" style="--fill: 70%"><div class="name">React</div><div class="bar-track"><div class="bar-fill"></div></div></div>
+      <div class="skill-card reveal" style="--fill: 65%"><div class="name">Python</div><div class="bar-track"><div class="bar-fill"></div></div></div>
+      <div class="skill-card reveal" style="--fill: 65%"><div class="name">Node.js</div><div class="bar-track"><div class="bar-fill"></div></div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  Adams Bilal — built with intent.
+</footer>
+
+<div class="sticky-cta">
+  <a href="projects.html" class="primary">View Work</a>
+  <a href="contact.html" class="secondary">Contact</a>
+</div>
+
+<script>
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => observer.observe(el));
+
+  const hero = document.getElementById('heroSection');
+  if (hero) {
+    hero.addEventListener('mousemove', (e) => {
+      const rect = hero.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width - 0.5) * 20;
+      const y = ((e.clientY - rect.top) / rect.height - 0.5) * 20;
+      document.querySelector('.glow-1').style.transform = `translate(${x}px, ${y}px)`;
+      document.querySelector('.glow-2').style.transform = `translate(${-x}px, ${-y}px)`;
+    });
+  }
+</script>
+
+</body>
+</html>
