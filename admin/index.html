@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Portfolio Admin — Adams Bilal</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <main class="shell">
+    <a class="back" href="../index.html">← View portfolio</a>
+    <section class="panel" id="loginPanel">
+      <p class="eyebrow">PRIVATE ADMIN</p>
+      <h1>Sign in</h1>
+      <p>Use the portfolio owner email to receive a secure sign-in link.</p>
+      <form id="loginForm">
+        <label for="email">Owner email</label>
+        <input id="email" type="email" autocomplete="email" value="billybilsky5@gmail.com" required>
+        <button type="submit">Email me a sign-in link</button>
+      </form>
+      <p class="message" id="loginMessage" role="status"></p>
+    </section>
+
+    <section class="panel editor hidden" id="editorPanel">
+      <div class="editor-head">
+        <div><p class="eyebrow">PORTFOLIO CONTENT</p><h1>Edit your site</h1></div>
+        <button class="secondary" id="signOut">Sign out</button>
+      </div>
+      <p>Update page text and contact links here. Saving publishes changes to the live site.</p>
+      <form id="editorForm">
+        <fieldset><legend>Home</legend>
+          <label>Eyebrow<input data-field="home.eyebrow"></label>
+          <label>Headline<input data-field="home.title"></label>
+          <label>Highlighted word<input data-field="home.accent"></label>
+          <label>Headline ending<input data-field="home.closing"></label>
+          <label>Introduction<textarea data-field="home.subtitle" rows="3"></textarea></label>
+          <label>Skills (JSON list)<textarea data-field="home.skills" data-json rows="8" spellcheck="false"></textarea></label>
+        </fieldset>
+        <fieldset><legend>About</legend>
+          <label>What I do<textarea data-field="about.whatIDo" rows="4"></textarea></label>
+          <label>How I work<textarea data-field="about.howIWork" rows="4"></textarea></label>
+          <label>FAQ (JSON list)<textarea data-field="about.faq" data-json rows="9" spellcheck="false"></textarea></label>
+        </fieldset>
+        <fieldset><legend>Projects</legend>
+          <label>Projects (JSON list)<textarea data-field="projects" data-json rows="16" spellcheck="false"></textarea></label>
+        </fieldset>
+        <fieldset><legend>Contact</legend>
+          <label>Headline<input data-field="contact.headline"></label>
+          <label>Introduction<textarea data-field="contact.intro" rows="3"></textarea></label>
+          <label>Email<input data-field="contact.email" type="email"></label>
+          <label>WhatsApp URL<input data-field="contact.whatsapp" type="url"></label>
+          <label>WhatsApp text<input data-field="contact.whatsappLabel"></label>
+          <label>TikTok URL<input data-field="contact.tiktok" type="url"></label>
+          <label>TikTok handle<input data-field="contact.tiktokLabel"></label>
+          <label>Instagram URL<input data-field="contact.instagram" type="url"></label>
+          <label>Instagram handle<input data-field="contact.instagramLabel"></label>
+        </fieldset>
+        <p id="formatHelp" class="hint">For Skills, FAQ, and Projects, keep the JSON valid. You can add or remove list items in those fields.</p>
+      </form>
+      <div class="actions"><button id="save">Save changes</button><span class="message" id="saveMessage" role="status"></span></div>
+    </section>
+    <p class="footnote">Only the portfolio owner can save changes. Public visitors can read the portfolio content.</p>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../supabase-config.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

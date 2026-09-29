@@ -51,6 +51,7 @@
 
 <section style="padding-top:0;">
   <div class="wrap">
+    <div data-cms-list="projects">
     <div class="project-card reveal">
       <div class="project-head">
         <h3>Sabr Scents</h3>
@@ -72,6 +73,7 @@
       </div>
       <div class="links"><a href="https://sabrscents.netlify.app" target="_blank" rel="noopener">Live site →</a></div>
     </div>
+    </div>
   </div>
 </section>
 
@@ -90,6 +92,9 @@
   <a href="contact.html" class="secondary">Contact</a>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
+<script src="site-content.js"></script>
 <script>
   const revealEls = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
