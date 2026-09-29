@@ -21,6 +21,6 @@ The SQL in `supabase/schema.sql` creates and seeds `public.portfolio_content`, e
 
 1. Accept the Supabase invitation sent to the owner email.
 2. Open `/admin/` on the deployed site and request a sign-in link.
-3. Edit the JSON for Home, About, Projects, and Contact, then choose **Save changes**. The public pages read the saved content from Supabase.
+3. Edit the Home, About, Projects, and Contact fields, then choose **Save changes**. The public pages read the saved content from Supabase.
 
-The editor validates JSON before saving. Projects and FAQ items are arrays, so add or remove entries in those arrays to manage the lists.
+The Skills, FAQ, and Projects list fields use JSON and are validated before saving. Add or remove entries in those lists to manage the items.
